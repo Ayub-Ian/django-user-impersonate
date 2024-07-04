@@ -27,8 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'accounts.AppUser'
 # Application definition
+
+APPITY_RANDOM_ID = {
+    'default': {'MIN': 1000,
+                'MAX': 999999,
+                'GROWTH_FACTOR': 10,
+                'GROW_AFTER_COLLISIONS': 5}
+}
 
 INSTALLED_APPS = [
     'rest_framework',
